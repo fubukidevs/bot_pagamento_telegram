@@ -2037,7 +2037,7 @@ async def pagar_pix(update: Update, context: CallbackContext):
 
     # Obtém as informações de pagamento com o bot_id
     payment_info = manager.get_payment_by_id(payment_id)
-    cache['payments'][payment_id]['continue'] = False
+    
     print(f"Informações de pagamento recuperadas: {payment_info}")
 
     if payment_info[4] != "paid":
